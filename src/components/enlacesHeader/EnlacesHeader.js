@@ -178,6 +178,9 @@ export const enlaces = [
         const back = document.createElement('i')
         back.className='fa-solid fa-chevron-left'
         back.classList.add('backOff')
+        back.addEventListener('click', ()=>{
+            
+        })
         closeMenu.append(back,pMenu)
         const ulMenu = document.createElement('ul')
         const c=closeMenu
@@ -190,6 +193,14 @@ export const enlaces = [
             if(enlace.submenu) {
                 const submenu = subMenu(enlace.submenu)
                 divContainer.append(submenu)
+                elc.addEventListener('click', ()=> {
+                    submenu.classList.add('activeSubMenu')
+                    back.classList.add('backOn')
+                })
+                back.addEventListener('click', ()=>{
+                    submenu.classList.remove('activeSubMenu')
+                    back.classList.remove('backOn')
+                })
             }
         });
         pMenu.addEventListener('click', ()=> {

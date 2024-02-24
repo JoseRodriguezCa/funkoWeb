@@ -8,6 +8,13 @@ export const navButton = (nombre,icono) => {
     const span = document.createElement('span')
     span.innerHTML=nombre
 
+    if(nombre=='Carrito'){
+        const span = document.createElement('span')
+        span.className='contador'
+        span.innerHTML='0'
+        li.append(span)
+    }
+
     li.append(i,span)
 
     return li
@@ -29,18 +36,6 @@ export const navMenu = (nombre,href,submenu,clase) => {
         const i = document.createElement('i')
         i.className='fa-solid fa-angle-right'
         li.append(i)
-        i.addEventListener('click', ()=>{
-        const ulSubMenu = document.querySelector('.subMenu')
-        ulSubMenu.classList.add('activeSubMenu')
-        if(document.querySelector('.activeSubMenu')) {
-            const backOff = document.querySelector('.backOff')
-            backOff.classList.add('backOn')
-            backOff.addEventListener('click', ()=>{
-                ulSubMenu.classList.remove('activeSubMenu')
-                backOff.classList.remove('backOn')
-            })
-        }
-        })
     }
 
     
