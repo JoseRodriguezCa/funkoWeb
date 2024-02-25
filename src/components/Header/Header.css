@@ -3,11 +3,11 @@
     background-color: #ffc107;
     width: 100%;
     border-bottom: solid 3px black;
-    border-top: 3px solid black;
 
 }
 
 .logo {
+    border-top: 3px solid black;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -18,7 +18,12 @@
     justify-content: center;
     text-align: center;
     align-items: center;
-    gap: 25px;
+    gap: 45px;
+}
+
+.btnHeader:last-of-type {
+    top: -12px;
+    position: relative;
 }
 
 .btnHeader {
@@ -35,23 +40,27 @@
     align-items: center;
     text-align: center;
     justify-content: space-between;
+    height: 30px;
+    font-size: 12px;
+    font-weight: 600;
 }
 
 .containerContacto > div {
     display: flex;
     gap: 20px;
     margin-left: 20px;
+    font-size: 15px;
 }
 
 .containerContacto a {
     display: flex;
     margin-right: 20px;
     align-items: baseline;
-    gap: 2px;
+    gap: 4px;
 }
 
 .containerContacto a i {
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .contador {

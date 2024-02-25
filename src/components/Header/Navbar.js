@@ -1,5 +1,6 @@
+import { buscador } from "../Buscador/Buscador"
 import { Menu } from "../enlacesHeader/EnlacesHeader"
-import { navButton } from "./NavBoton"
+import { navButton, navMenu } from "./NavBoton"
 
 
 
@@ -28,14 +29,26 @@ export const navbar = () => {
     navbar.append(ul)
     ul.className='btnContainer'
     const m = Menu()
+    const b = buscador()
     botonHeader.forEach(boton => {
         const btn = navButton(boton.nombre,boton.icono)
         if(boton.nombre =='Menu') {
             btn.addEventListener('click' , () => {
-            m.classList.add('active')
+                m.classList.add('active')
             })
         }
-        ul.append(btn)
+        if (boton.nombre == 'Buscar') {
+            btn.addEventListener('click', () => {
+                if (!b.classList.contains('activeBuscador')) {
+                    b.classList.add('activeBuscador');
+                    const input = b.querySelector('input')
+                    input.focus()
+                } else {
+                    b.classList.remove('activeBuscador');
+                }
+            });
+        }
+        ul.append(btn,b)
     });
     navbar.append(m)
 

@@ -12,7 +12,7 @@ export const contacto = () => {
     face.className = 'fa-brands fa-facebook-f'
     insta.className = 'fa-brands fa-instagram'
     cuantos.innerText = '0'
-    p.innerHTML = `Lista de deseos(${cuantos.innerText})`
+    p.innerHTML = `Lista de deseos (${cuantos.innerText})`
     a.append(corazon,p)
     divInstaFace.append(insta,face)
     divContacto.append(divInstaFace,a)

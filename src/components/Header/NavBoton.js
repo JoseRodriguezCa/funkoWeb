@@ -1,3 +1,4 @@
+import { mostrarProductos } from "../Carrito/Carrito"
 
 
 export const navButton = (nombre,icono) => {
@@ -7,14 +8,20 @@ export const navButton = (nombre,icono) => {
     i.className=icono
     const span = document.createElement('span')
     span.innerHTML=nombre
+    let numero;
 
     if(nombre=='Carrito'){
+        numero = 0;
         const span = document.createElement('span')
         span.className='contador'
-        span.innerHTML='0'
+        span.innerHTML=`${numero}`
         li.append(span)
+        li.addEventListener('click', () => {
+            const mostrar = mostrarProductos(numero);
+            console.log(numero);
+            li.append(mostrar);
+        });
     }
-
     li.append(i,span)
 
     return li
