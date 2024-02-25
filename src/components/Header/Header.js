@@ -7,7 +7,7 @@ export const header = () => {
     const header = document.createElement('header')
     header.classList.add('header')
     const c = contacto()
-    const l = logo( '../../img/logo-1656528169.jpg','/', 'logo')
+    const l = logo( 'https://latiendadefunkopop.es/img/cms/latiendadefunkopop-logo-retina.png','/', 'logo')
     const n = navbar()
     header.append(c,l,n)
     return header
