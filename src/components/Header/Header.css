@@ -13,12 +13,16 @@
     display: flex;
 }
 
+.logo img {
+    max-width: 200px;
+}
+
 .btnContainer {
     display: flex;
     justify-content: center;
     text-align: center;
     align-items: center;
-    gap: 45px;
+    gap: 35px;
 }
 
 .btnHeader:last-of-type {
