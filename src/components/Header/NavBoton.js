@@ -15,13 +15,20 @@ export const navButton = (nombre,icono) => {
         const span = document.createElement('span')
         span.className='contador'
         span.innerHTML=`${numero}`
-        li.append(span)
+        const mostrar = mostrarProductos(numero);
         li.addEventListener('click', () => {
-            const mostrar = mostrarProductos(numero);
-            console.log(numero);
-            li.append(mostrar);
+            const contenedor = document.querySelector('.contenedor')
+            console.log(numero)
+            if(!contenedor.classList.contains('contenedorActive')){
+                contenedor.classList.add('contenedorActive')
+            }else{
+                contenedor.classList.remove('contenedorActive')
+            }
         });
+        li.append(span,mostrar)
     }
+
+
     li.append(i,span)
 
     return li
