@@ -1,4 +1,4 @@
-import { mostrarProductos } from "../Carrito/Carrito"
+import { carritoLleno } from "../Carrito/Carrito"
 
 
 export const navButton = (nombre,icono) => {
@@ -8,24 +8,18 @@ export const navButton = (nombre,icono) => {
     i.className=icono
     const span = document.createElement('span')
     span.innerHTML=nombre
-    let numero;
-
     if(nombre=='Carrito'){
-        numero = 0;
+        let numCarrito = carritoLleno.length
         const span = document.createElement('span')
         span.className='contador'
-        span.innerHTML=`${numero}`
-        const mostrar = mostrarProductos(numero);
+        span.textContent = numCarrito
+        actualizarSpanCarrito(carritoLleno)
         li.addEventListener('click', () => {
-            const contenedor = document.querySelector('.contenedor')
-            console.log(numero)
-            if(!contenedor.classList.contains('contenedorActive')){
-                contenedor.classList.add('contenedorActive')
-            }else{
-                contenedor.classList.remove('contenedorActive')
-            }
-        });
-        li.append(span,mostrar)
+        const cartDiv = document.querySelector(".cart");
+        const body$$ = document.body
+        cartDiv.classList.toggle("openned");
+        body$$.classList.toggle("openned");})
+        li.append(span)
     }
 
 
@@ -56,3 +50,16 @@ export const navMenu = (nombre,href,submenu,clase) => {
 
     return li
 }
+
+export const actualizarSpanCarrito = (carritoLleno) => {
+    const contadorSpan = document.querySelector('.contador');
+    if (contadorSpan) {
+        if(carritoLleno.length == 0 ){
+            console.log(carritoLleno.length);
+            contadorSpan.textContent = '0';
+        }else {
+            contadorSpan.textContent = carritoLleno.length;
+            console.log("abajo",carritoLleno);
+        }
+    }
+};

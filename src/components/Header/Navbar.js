@@ -1,6 +1,6 @@
 import { buscador } from "../Buscador/Buscador"
 import { Menu } from "../enlacesHeader/EnlacesHeader"
-import { navButton, navMenu } from "./NavBoton"
+import { navButton } from "./NavBoton"
 
 
 

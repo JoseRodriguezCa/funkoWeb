@@ -30,3 +30,140 @@
     font-size: 13px;
     margin-left: 10px;
 }
+
+
+.cart {
+    position: fixed;
+    transition: all 0.5s;
+    width: 0px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 100svh;
+    top: 0;
+    right: 0;
+    background-color: rgb(222, 222, 222);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 100px;
+  }
+  .cart > .cart-div:last-child {
+    margin-bottom: 70px;
+  }
+  
+  .cart > div > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  .cart.openned {
+    width: 400px;
+  }
+
+  #totalSum {
+    margin-bottom: 30px;
+    border: solid 2px red;
+    padding: 10px;
+  }
+  
+  .cart-img {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    cursor: pointer;
+    transition: all 0.5s;
+  }
+  
+  .cart-img:hover {
+    transform: scale(1.1);
+  }
+  
+  .carrito {
+    width: 100px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 3;
+    cursor: pointer;
+    transition: all 0.5s;
+  }
+
+  .cart-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    width: 150px;
+    height: 150px;
+    margin-top: 30px;
+}
+
+  .div-span span {
+    background-color: #a79191;
+    font-size: 20px;
+    width: 20%;
+    height: 30px;
+    padding-top: 10px;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    cursor: pointer;
+    user-select: none;
+}
+
+.div-span span:active {
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+}
+
+.div-span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  gap: 20px;
+
+}
+  
+  .carrito:hover {
+    transform: scale(1.1);
+  }
+
+  .fa-circle-xmark {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  .fa-circle-xmark:active{
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+  }
+  
+  @media (max-width: 500px) {
+    .cart.openned {
+      width: 100%;
+      height: 100%;
+    }
+
+    body.openned {
+      overflow-y: hidden;
+    }
+    
+  }

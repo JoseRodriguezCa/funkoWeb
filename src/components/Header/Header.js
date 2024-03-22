@@ -3,6 +3,7 @@ import { logo } from "./Logo"
 import { navbar } from "./Navbar"
 import { contacto } from "./contacto"
 
+
 export const header = () => {
     const header = document.createElement('header')
     header.classList.add('header')

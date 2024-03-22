@@ -1,9 +1,11 @@
 import { header } from './src/components/Header/Header'
-import { main } from './src/components/Main/main'
+import { printProductsContent } from './src/components/Main/main'
+import { PRODUCTS } from './src/components/MookProducts/MookProducts'
 import './style.css'
 
 const body = document.querySelector('body')
-
+const firstChild = document.body.firstChild;
 const h = header()
-const m = main()
-body.append(h,m)
+body.insertBefore(h, firstChild)
+printProductsContent(PRODUCTS)
+

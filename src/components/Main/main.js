@@ -1,34 +1,46 @@
+import { actualizarCarrito, carritoLleno } from '../Carrito/Carrito';
+import { actualizarSpanCarrito } from '../Header/NavBoton';
 import './main.css'
 
-const articulos = [
-    {articulo1:'https://res.cloudinary.com/dtgsaqjwa/image/upload/v1708905870/latiendadefunkopop_slider_novedades_octubre22_compress_l1nhkk.jpg',
-    href:'/'
-    },
-    {articulo2:'https://res.cloudinary.com/dtgsaqjwa/image/upload/v1708905902/latiendadefunkopop_sliders_secundarios_camiseta_funko_10octubre22_q8njs7.jpg',
-    href:'/'
-    },
-    {articulo3:'https://res.cloudinary.com/dtgsaqjwa/image/upload/v1708905908/latiendadefunkopop_sliders_secundarios_camiseta_funko_10octubre22-2_aln749.jpg',
-    href:'/'
+export const printProductsContent = (products) => {
+    const divContent = document.querySelector(".content");
+    divContent.innerHTML = "";
+  
+    for (const product of products) {
+      const div = document.createElement("div");
+      const name = document.createElement("h3");
+      const price = document.createElement("p");
+      const divImg = document.createElement("div");
+      const img = document.createElement("img");
+      const cart = document.createElement("img");
+      const p = document.createElement('span')
+      name.textContent = product.nombre;
+      price.textContent = product.precio;
+      img.src = product.img;
+      divImg.classList.add("div-img");
+      div.classList.add("product");
+      cart.classList.add("cart-img");
+      cart.src = "https://cdn-icons-png.flaticon.com/512/5465/5465858.png";
+      div.append(cart);
+      div.append(name);
+      div.append(divImg);
+      div.append(price);
+      divImg.append(img);
+      divContent.append(div);
+      if(carritoLleno){
+        const totalSumElement = document.querySelector("#totalSum");
+        totalSumElement.style.display = "none";
+      }
+      cart.addEventListener("click", () => {
+        const existingProduct = carritoLleno.find(item => item.id === product.id);
+        if (existingProduct) {
+          existingProduct.cantidad += 1;
+        } else {
+          carritoLleno.push(product);
+        }
+        localStorage.setItem("productsCart", JSON.stringify(carritoLleno));
+        actualizarCarrito(carritoLleno);
+        actualizarSpanCarrito(carritoLleno)
+      });
     }
-]
-
-export const main = () => {
-    const main = document.createElement('main')
-    const section = document.createElement('section')
-    section.className='sectionContainer'
-    main.append(section)
-
-    articulos.forEach((articulo, index) =>{
-        const article = document.createElement('article')
-        article.classList='artContenedor'
-        const a = document.createElement('a')
-        const img = document.createElement('img')
-        img.src=articulo[`articulo${index + 1}`]
-        article.append(img)
-        a.append(article)
-        a.target='_blank'
-        a.href=articulo.href
-        section.append(a)
-    } )
-    return main
-}
+  };
