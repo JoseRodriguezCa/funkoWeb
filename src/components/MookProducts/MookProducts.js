@@ -84,7 +84,7 @@ export const PRODUCTS = [
       nombre: "Funko Pop Pikachu",
       precio: 16.99,
       categoria: "Funko Pop",
-      img: "https://cdn.shopify.com/s/files/1/0587/8937/0579/products/1a5e735d821344c9a9d269d7786da888_630x.jpg?v=1605210871",
+      img: "https://res.cloudinary.com/dtgsaqjwa/image/upload/v1711214637/proyectoPortfolio/ProyectoFunko/funko-pop-pokemon-pikachu-10pulgadas-31542_bc5pf4.webp",
       cantidad: 1
   },
   {
@@ -92,7 +92,7 @@ export const PRODUCTS = [
       nombre: "Funko Pop Groot",
       precio: 23.99,
       categoria: "Funko Pop",
-      img: "https://cdn.shopify.com/s/files/1/0587/8937/0579/products/b6a0bdc100f446ba8666e93bcbfbbd67_630x.jpg?v=1605210876",
+      img: "https://res.cloudinary.com/dtgsaqjwa/image/upload/v1711214670/proyectoPortfolio/ProyectoFunko/funko-pop-marvel-los-guardianes-de-la-galaxia-volumen-2-groot-pequeno-13230_atk9zf.jpg",
       cantidad: 1
   },
   {
@@ -100,7 +100,7 @@ export const PRODUCTS = [
       nombre: "Funko Pop Elsa",
       precio: 20.99,
       categoria: "Funko Pop",
-      img: "https://cdn.shopify.com/s/files/1/0587/8937/0579/products/c1e7c74003114e3f8cf6a0a07b424be5_630x.jpg?v=1605210879",
+      img: "https://res.cloudinary.com/dtgsaqjwa/image/upload/v1711214702/proyectoPortfolio/ProyectoFunko/funko-pop-disney-ultimate-princess-elsa-56350_ijpciw.webp",
       cantidad: 1
   },
   {
@@ -108,7 +108,7 @@ export const PRODUCTS = [
       nombre: "Funko Pop Buzz Lightyear",
       precio: 21.99,
       categoria: "Funko Pop",
-      img: "https://cdn.shopify.com/s/files/1/0587/8937/0579/products/91c9f5467da24e4bbfa2a77f44fd7e6b_630x.jpg?v=1605210882",
+      img: "https://res.cloudinary.com/dtgsaqjwa/image/upload/v1711214734/proyectoPortfolio/ProyectoFunko/funko-pop-disney-lightyear-buzz-lightyear-xl-01-63948_fmtd9c.webp",
       cantidad: 1
   },
   {
@@ -116,7 +116,7 @@ export const PRODUCTS = [
       nombre: "Funko Pop Wonder Woman",
       precio: 19.99,
       categoria: "Funko Pop",
-      img: "https://cdn.shopify.com/s/files/1/0587/8937/0579/products/8e13b44781f44d4f900e63d7c731fa33_630x.jpg?v=1605210885",
+      img: "https://res.cloudinary.com/dtgsaqjwa/image/upload/v1711214769/proyectoPortfolio/ProyectoFunko/funko-pop-dc-imperial-palace-wonder-woman-52434_pamssn.webp",
       cantidad: 1
   },
   {
@@ -124,7 +124,7 @@ export const PRODUCTS = [
     nombre: "Funko Pop Captain Marvel",
     precio: 18.99,
     categoria: "Funko Pop",
-    img: "https://cdn.shopify.com/s/files/1/0587/8937/0579/products/854b7d43e0704ad5b13dd6dce6877d1e_630x.jpg?v=1605210892",
+    img: "https://res.cloudinary.com/dtgsaqjwa/image/upload/v1711214775/proyectoPortfolio/ProyectoFunko/funko-pop-marvel-luchadores-capitana-marvel-53872_rhfmzt.webp",
     cantidad: 1
 },
 {
@@ -132,7 +132,7 @@ export const PRODUCTS = [
     nombre: "Funko Pop Baby Yoda",
     precio: 16.99,
     categoria: "Funko Pop",
-    img: "https://cdn.shopify.com/s/files/1/0587/8937/0579/products/f4d648fe79dc4503a095eb45c7b5ad28_630x.jpg?v=1605210896",
+    img: "https://res.cloudinary.com/dtgsaqjwa/image/upload/v1711214811/proyectoPortfolio/ProyectoFunko/funko-pop-star-wars-the-mandalorian-baby-yoda-con-rana-49932_x1wp7z.webp",
     cantidad: 1
 },
 {
@@ -140,7 +140,7 @@ export const PRODUCTS = [
     nombre: "Funko Pop Hermione Granger",
     precio: 22.99,
     categoria: "Funko Pop",
-    img: "https://cdn.shopify.com/s/files/1/0587/8937/0579/products/b3f36a9b71bb45d2a5d69e6566a3bcb2_630x.jpg?v=1605210899",
+    img: "https://res.cloudinary.com/dtgsaqjwa/image/upload/v1711214867/proyectoPortfolio/ProyectoFunko/funko-pop-harry-potter-hermione-granger-como-gato-35509_yz094r.webp",
     cantidad: 1
 },
 {
@@ -148,7 +148,7 @@ export const PRODUCTS = [
     nombre: "Funko Pop The Mandalorian",
     precio: 24.99,
     categoria: "Funko Pop",
-    img: "https://cdn.shopify.com/s/files/1/0587/8937/0579/products/e82070d7c0484c3ea0dc3d1f05fb224a_630x.jpg?v=1605210903",
+    img: "https://res.cloudinary.com/dtgsaqjwa/image/upload/v1711214896/proyectoPortfolio/ProyectoFunko/funko-pop-star-wars-the-mandalorian-mandalorian-volando-con-jet-baby-yoda-50959_dfwgfc.webp",
     cantidad: 1
 },
 {
@@ -156,7 +156,7 @@ export const PRODUCTS = [
     nombre: "Funko Pop Jack Skellington",
     precio: 20.99,
     categoria: "Funko Pop",
-    img: "https://cdn.shopify.com/s/files/1/0587/8937/0579/products/aebfbcb6d277463bb28e674c3b8e4ba2_630x.jpg?v=1605210908",
+    img: "https://res.cloudinary.com/dtgsaqjwa/image/upload/v1711214929/proyectoPortfolio/ProyectoFunko/funko-pop-disney-pesadilla-antes-de-navidad-jack-skellington_mnly9m.jpg",
     cantidad: 1
 }
 ];
