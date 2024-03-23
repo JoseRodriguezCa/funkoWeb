@@ -41,7 +41,8 @@
     height: 100svh;
     top: 0;
     right: 0;
-    background-color: rgb(222, 222, 222);
+    /* background-color: rgb(222, 222, 222); */
+    background-color:white;
     z-index: 2;
     display: flex;
     align-items: center;
@@ -108,7 +109,6 @@
     font-size: 20px;
     width: 20%;
     height: 30px;
-    padding-top: 10px;
     border-radius: 100%;
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
@@ -116,6 +116,27 @@
     -o-border-radius: 100%;
     cursor: pointer;
     user-select: none;
+}
+
+#trashCan {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#trashCan:active {
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+}
+
+.div-span > span:first-of-type {
+  padding-top: 5px ;
+}
+
+.div-span > span:last-of-type {
+  padding-top: 5px ;
 }
 
 .div-span span:active {
@@ -130,7 +151,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 160px;
   text-align: center;
   gap: 20px;
 

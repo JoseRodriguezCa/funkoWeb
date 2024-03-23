@@ -1,7 +1,7 @@
 .containerMenu {
     background-color: white;
     color: black;
-    width: 77%;
+    width: 30%;
     height: 99svh;
     display: flex;
     flex-direction: column;
@@ -113,6 +113,7 @@
     font-weight: 700;
     position: absolute;
     top: 50px;
+    padding-left: 10px;
     right: -100%;
     transition: right 0.3s ease;
 }

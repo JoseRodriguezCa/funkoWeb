@@ -1,5 +1,4 @@
 import { actualizarSpanCarrito } from '../Header/NavBoton';
-import { PRODUCTS } from '../MookProducts/MookProducts';
 import './Carrito.css'
 
 export const carritoLleno = JSON.parse(localStorage.getItem("productsCart")) || [];
@@ -46,7 +45,10 @@ export const actualizarCarrito = (products) => {
       closeCart.classList = "fa-solid fa-circle-xmark"
       closeCart.addEventListener('click', () => {
         const cartDiv = document.querySelector(".cart");
+        const body$$ = document.body
         cartDiv.classList.toggle("openned");
+        body$$.classList.toggle("openned")
+
       })
       totalSum.id = 'totalSum'
       totalSum.textContent = "Total: " + totalSumValue.toFixed(2) + "€"; 
@@ -71,8 +73,8 @@ const restarProducto = (producto, divProducto, spanCantidad, cartTotal, products
         totalSumElement.style.display = 'none'
         }
     }
-    guardarCarrito();
     actualizarPrecioTotal(products)
+    guardarCarrito();
     actualizarSpanCarrito(products)
 }
 
@@ -84,9 +86,9 @@ const sumarProducto = (producto, spanCantidad, totalSpan, products) => {
     actualizarPrecioTotal(products)
     actualizarSpanCarrito(products)
 }
-let totalSumValue = 0; 
-const actualizarPrecioTotal = (products) => {
 
+const actualizarPrecioTotal = (products) => {
+    let totalSumValue = 0; 
   for (const product of products) {
       totalSumValue += product.precio * product.cantidad;
   }
@@ -97,11 +99,13 @@ const actualizarPrecioTotal = (products) => {
 const tacho = (divProduct, product, products) => {
     const index = carritoLleno.findIndex(item => item.id === product.id);
     if (index !== -1) {
+        product.cantidad = 1;
         carritoLleno.splice(index, 1);}
         divProduct.remove();
         if(carritoLleno.length === 0){
             const totalSumElement = document.querySelector("#totalSum");
             totalSumElement.style.display = 'none'
+            
             }
         guardarCarrito();
         actualizarPrecioTotal(products);

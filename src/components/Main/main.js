@@ -15,7 +15,7 @@ export const printProductsContent = (products) => {
       const cart = document.createElement("img");
       const p = document.createElement('span')
       name.textContent = product.nombre;
-      price.textContent = product.precio;
+      price.textContent = product.precio + '€' ;
       img.src = product.img;
       divImg.classList.add("div-img");
       div.classList.add("product");

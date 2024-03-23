@@ -37,9 +37,6 @@
     cursor: pointer;
 }
 
-
-
-
 .containerContacto {
     display: flex;
     background-color: red;
@@ -63,10 +60,8 @@
     margin-right: 20px;
     align-items: baseline;
     gap: 4px;
-}
-
-.containerContacto a i {
-    font-size: 12px;
+    color: black;
+    text-decoration: none;
 }
 
 .contador {
