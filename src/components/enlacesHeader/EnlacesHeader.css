@@ -126,3 +126,11 @@
     -ms-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
 }
+
+
+@media (max-width: 500px) {
+    .containerMenu{
+        width: 45%;
+        overflow: hidden;
+    }
+  }
