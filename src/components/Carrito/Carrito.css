@@ -41,7 +41,6 @@
     height: 100svh;
     top: 0;
     right: 0;
-    /* background-color: rgb(222, 222, 222); */
     background-color:white;
     z-index: 2;
     display: flex;
