@@ -36,7 +36,7 @@ export const PRODUCTS = [
       nombre: "Funko Pop Batman",
       precio: 21.99,
       categoria: "Funko Pop",
-      img: "https://cdn.shopify.com/s/files/1/0587/8937/0579/products/ebf547f3fba14ddbb0b8a1cc1b973876_630x.jpg?v=1605210843",
+      img: "https://res.cloudinary.com/dtgsaqjwa/image/upload/v1711214203/proyectoPortfolio/ProyectoFunko/funko-pop-dc-batman-37248_fgcjji.webp",
       cantidad: 1
   },
   {
@@ -44,7 +44,7 @@ export const PRODUCTS = [
       nombre: "Funko Pop Captain America",
       precio: 18.99,
       categoria: "Funko Pop",
-      img: "https://cdn.shopify.com/s/files/1/0587/8937/0579/products/a3ee4425af6d4b10a3022a7aeb88c25b_630x.jpg?v=1605210846",
+      img: "https://res.cloudinary.com/dtgsaqjwa/image/upload/v1711214251/proyectoPortfolio/ProyectoFunko/funko-pop-marvel-infinity-war-capitan-america-26466_mcx7wa.jpg",
       cantidad: 1
   },
   {
@@ -52,7 +52,7 @@ export const PRODUCTS = [
       nombre: "Funko Pop Thanos",
       precio: 26.99,
       categoria: "Funko Pop",
-      img: "https://cdn.shopify.com/s/files/1/0587/8937/0579/products/7c3c4225d10540f9882b1ff0a37b2437_630x.jpg?v=1605210850",
+      img: "https://res.cloudinary.com/dtgsaqjwa/image/upload/v1711214289/proyectoPortfolio/ProyectoFunko/funko-dorbz-marvel-avengers-infinity-war-thanos_xmbhez.webp",
       cantidad: 1
   },
   {
@@ -60,7 +60,7 @@ export const PRODUCTS = [
       nombre: "Funko Pop Deadpool",
       precio: 19.99,
       categoria: "Funko Pop",
-      img: "https://cdn.shopify.com/s/files/1/0587/8937/0579/products/51a07a3605144db6a1d128cd3947de29_630x.jpg?v=1605210853",
+      img: "https://res.cloudinary.com/dtgsaqjwa/image/upload/v1711214314/proyectoPortfolio/ProyectoFunko/funko-pop-marvel-deadpool-dos-espadas_gfvhbr.webp",
       cantidad: 1
   },
   {
@@ -68,7 +68,7 @@ export const PRODUCTS = [
       nombre: "Funko Pop Superman",
       precio: 22.99,
       categoria: "Funko Pop",
-      img: "https://cdn.shopify.com/s/files/1/0587/8937/0579/products/ff9e04e5ad7e4a8b88cf28586f601c2c_630x.jpg?v=1605210858",
+      img: "https://res.cloudinary.com/dtgsaqjwa/image/upload/v1711214344/proyectoPortfolio/ProyectoFunko/funko-pop-dc-comics-superman-10pulgadas-con-opcion-chase-51263_rpkrdh.webp",
       cantidad: 1
   },
   {
@@ -76,7 +76,7 @@ export const PRODUCTS = [
       nombre: "Funko Pop Joker",
       precio: 18.99,
       categoria: "Funko Pop",
-      img: "https://cdn.shopify.com/s/files/1/0587/8937/0579/products/39962bcab0d94a50a1ee14531e9bfb3f_630x.jpg?v=1605210863",
+      img: "https://res.cloudinary.com/dtgsaqjwa/image/upload/v1711214373/proyectoPortfolio/ProyectoFunko/funko-pop-dc-black-light-joker-multicolor-51723_bd6np2.webp",
       cantidad: 1
   },
   {
