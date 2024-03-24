@@ -53,7 +53,6 @@ export const actualizarCarrito = (products) => {
       totalSum.id = 'totalSum'
       totalSum.textContent = "Total: " + totalSumValue.toFixed(2) + "€"; 
       cart.append(totalSum,closeCart); 
-
 }
 
 const restarProducto = (producto, divProducto, spanCantidad, cartTotal, products) => {
@@ -105,7 +104,6 @@ const tacho = (divProduct, product, products) => {
         if(carritoLleno.length === 0){
             const totalSumElement = document.querySelector("#totalSum");
             totalSumElement.style.display = 'none'
-            
             }
         guardarCarrito();
         actualizarPrecioTotal(products);

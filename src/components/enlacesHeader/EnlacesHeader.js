@@ -1,4 +1,6 @@
 import { navMenu } from "../Header/NavBoton"
+import { printProductsContent } from "../Main/main"
+import { PRODUCTS } from "../MookProducts/MookProducts"
 import { subMenu } from "../SubMenu/SubMenu"
 import './EnlacesHeader.css'
 export const enlaces = [
@@ -119,7 +121,7 @@ export const enlaces = [
             href:'/'
         },
         {
-            nombre:'Villanos',
+            nombre:'Toy Story',
             href:'/'
         },
         {
@@ -178,14 +180,11 @@ export const enlaces = [
         const back = document.createElement('i')
         back.className='fa-solid fa-chevron-left'
         back.classList.add('backOff')
-        back.addEventListener('click', ()=>{
-            
-        })
         closeMenu.append(back,pMenu)
         const ulMenu = document.createElement('ul')
         const c=closeMenu
         c.classList = 'closeMenu'
-        pMenu.innerText = 'X'
+        pMenu.classList = 'fa-solid fa-circle-xmark'
         divContainer.append(c,ulMenu)
         enlaces.forEach(enlace => {
             const elc = navMenu(enlace.nombre, enlace.href, enlace.submenu,'btnMenu')
@@ -207,5 +206,26 @@ export const enlaces = [
             divContainer.classList.remove('active')
         })
         return divContainer
+    }
+
+
+
+    export const handleSubMenu = () => {
+
+        const menuNombre = document.querySelectorAll('.menuText')
+        menuNombre.forEach(element => {
+            element.addEventListener("click", (e) => {
+                e.preventDefault()
+                    const recogedor = element.innerHTML
+                PRODUCTS.forEach(element => {
+                    if(recogedor == element.categoria){
+                        console.log(element.categoria);
+                        printProductsContent(PRODUCTS,element.categoria )
+                    }
+                });
+            });
+            
+        });
+
     }
 

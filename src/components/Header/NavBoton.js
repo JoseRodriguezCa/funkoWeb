@@ -36,6 +36,7 @@ export const navMenu = (nombre,href,submenu,clase) => {
     
     li.className=clase
     a.className='link'
+    p.className = 'menuText'
     a.href = href
     p.innerHTML=nombre
     li.append(a)

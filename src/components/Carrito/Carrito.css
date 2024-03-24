@@ -185,6 +185,14 @@
     body.openned {
       overflow-y: hidden;
     }
+
+    .cart-div {
+      width: 70%;
+      height: 30%;
+  }
+
+  .div-span{
+    margin-right: 35px;
+  }
     
   }
-  
