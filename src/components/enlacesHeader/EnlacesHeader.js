@@ -215,14 +215,18 @@ export const enlaces = [
         const menuNombre = document.querySelectorAll('.menuText')
         menuNombre.forEach(element => {
             element.addEventListener("click", (e) => {
-                e.preventDefault()
+                
                     const recogedor = element.innerHTML
-                PRODUCTS.forEach(element => {
-                    if(recogedor == element.categoria){
-                        console.log(element.categoria);
-                        printProductsContent(PRODUCTS,element.categoria )
+                    console.log(element.innerHTML);
+                    if(recogedor !== "Home"){
+                        PRODUCTS.forEach(element => {
+                            e.preventDefault()
+                            if(recogedor == element.categoria){
+                                console.log(element.categoria);
+                                printProductsContent(PRODUCTS,element.categoria )
+                            }
+                        });
                     }
-                });
             });
             
         });
