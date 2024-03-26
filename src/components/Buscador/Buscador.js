@@ -1,3 +1,5 @@
+import { printProductsContent } from '../Main/main'
+import { PRODUCTS } from '../MookProducts/MookProducts'
 import './Buscador.css'
 
 export const buscador = () => {
@@ -17,10 +19,19 @@ export const buscador = () => {
 
 export const handleSearch = () => {
     const input = document.querySelector('#buscador')
+    const changeSearch = document.querySelector('.containerBuscador')
     input.addEventListener("keydown", (e) => {
         if(e.key === 'Enter'){
-        e.preventDefault()
-        console.log(input.value)
+            e.preventDefault()
+            const searchText = input.value.toLowerCase();
+            changeSearch.classList.toggle('activeBuscador')
+            const filteredProduct = PRODUCTS.filter(product => {
+                const searchName = product.nombre.toLowerCase().includes(searchText)
+                const searchCategory = product.categoria.some(categoria => categoria.toLowerCase().includes(searchText) )
+                return searchName || searchCategory
+            })
+            console.log(filteredProduct)
+            printProductsContent(filteredProduct)
         }
     })
     // input.addEventListener("keyup", (e) => {
