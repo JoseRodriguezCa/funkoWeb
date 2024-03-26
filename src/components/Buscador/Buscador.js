@@ -17,7 +17,16 @@ export const buscador = () => {
 
 export const handleSearch = () => {
     const input = document.querySelector('#buscador')
-    input.addEventListener("input", () => {
+    input.addEventListener("keydown", (e) => {
+        if(e.key === 'Enter'){
+        e.preventDefault()
         console.log(input.value)
+        }
     })
+    // input.addEventListener("keyup", (e) => {
+    //     if(e.key === 'Enter'){
+    //     e.preventDefault()
+    //     console.log(input.value)
+    //     }
+    // })
 }

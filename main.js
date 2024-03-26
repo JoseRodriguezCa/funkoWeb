@@ -10,5 +10,6 @@ const firstChild = document.body.firstChild;
 const h = header()
 body.insertBefore(h, firstChild)
 printProductsContent(PRODUCTS)
+handleSubMenu()
 handleSearch()
 
