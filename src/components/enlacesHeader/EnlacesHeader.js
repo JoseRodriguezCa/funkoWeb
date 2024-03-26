@@ -212,24 +212,24 @@ export const enlaces = [
 
     export const handleSubMenu = () => {
 
-        const menuNombre = document.querySelectorAll('.menuText')
-        menuNombre.forEach(element => {
-            element.addEventListener("click", (e) => {
-                
-                    const recogedor = element.innerHTML
-                    console.log(element.innerHTML);
-                    if(recogedor !== "Home"){
-                        PRODUCTS.forEach(element => {
-                            e.preventDefault()
-                            if(recogedor == element.categoria){
-                                console.log(element.categoria);
-                                printProductsContent(PRODUCTS,element.categoria )
-                            }
-                        });
-                    }
-            });
+    const menuNombre = document.querySelectorAll('.menuText')
+    menuNombre.forEach(element => {
+        element.addEventListener("click", (e) => {
+            const recogedor = element.innerHTML
+            const containerMenu = document.querySelector(".containerMenu");
+            const body$$ = document.body
+            body$$.classList.toggle("openned");
+            containerMenu.classList.toggle("active");
             
+            if(recogedor !== "Home"){
+                PRODUCTS.forEach(element => {
+                    e.preventDefault()
+                    if(element.categoria.includes(recogedor)){
+                        printProductsContent(PRODUCTS,recogedor )
+                    }
+                });
+            }
         });
-
+    });
     }
 

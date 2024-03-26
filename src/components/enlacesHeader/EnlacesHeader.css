@@ -39,6 +39,8 @@
 .closeMenu i {
     margin-left: 10px;
     cursor: pointer;
+    height: 15px;
+    width: 10%;
 }
 
 .closeMenu p {
@@ -76,6 +78,11 @@
 
 .btnMenu i {
     cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: 25px;
+    align-items: flex-end;
 }
 
 .btnSubMenu {
@@ -92,7 +99,7 @@
     text-decoration: none;
     color: black;
     align-items: center;
-    width: 70%;
+    width: 1%;
 }
 
 .backOff  {
@@ -107,12 +114,6 @@
 .backOn {
     opacity: 1;
 }
-
-.containerMenu i {
-    height: 15px;
-    width: 10%;
-}
-
 
 .subMenu {
     background-color: white;
@@ -131,6 +132,10 @@
     transition: right 0.3s ease;
 }
 
+.btnSubMenu a {
+    width: 100%;
+}
+
 .activeSubMenu {
     right: 0;
     transition: all 0.3s ease;
@@ -143,8 +148,11 @@
 
 @media (max-width: 500px) {
     .containerMenu{
-        width: 45%;
+        width: 55%;
         overflow: hidden;
+    }
+    .menuText {
+        width: 100%;
     }
   }
 

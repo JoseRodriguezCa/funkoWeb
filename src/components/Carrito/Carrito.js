@@ -32,8 +32,8 @@ export const actualizarCarrito = (products) => {
       trashCan.id = "trashCan"
       lessSpan.classList = "fa-solid fa-minus";
       sumSpan.classList = "fa-solid fa-plus";
-      divSpan.append(trashCan,lessSpan, numberSpan, sumSpan);
-      divProduct.append(imgProduct, divSpan, cartTotal);
+      divSpan.append(lessSpan, numberSpan, sumSpan);
+      divProduct.append(imgProduct, divSpan,trashCan, cartTotal);
       cart.append(divProduct,);
       lessSpan.addEventListener("click", () => restarProducto(product, divProduct, numberSpan, cartTotal, products));
       sumSpan.addEventListener("click", () => sumarProducto(product, numberSpan, cartTotal, products));

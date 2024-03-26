@@ -11,6 +11,13 @@ export const buscador = () => {
     input.id = 'buscador'
     form.className = 'containerBuscador'
     form.append(input,i)
-    
     return form
+}
+
+
+export const handleSearch = () => {
+    const input = document.querySelector('#buscador')
+    input.addEventListener("input", () => {
+        console.log(input.value)
+    })
 }

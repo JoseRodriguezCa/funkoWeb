@@ -1,3 +1,4 @@
+import { handleSearch } from './src/components/Buscador/Buscador'
 import { header } from './src/components/Header/Header'
 import { printProductsContent } from './src/components/Main/main'
 import { PRODUCTS } from './src/components/MookProducts/MookProducts'
@@ -9,5 +10,5 @@ const firstChild = document.body.firstChild;
 const h = header()
 body.insertBefore(h, firstChild)
 printProductsContent(PRODUCTS)
-handleSubMenu()
+handleSearch()
 

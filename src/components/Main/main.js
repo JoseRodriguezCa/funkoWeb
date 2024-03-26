@@ -24,7 +24,6 @@ const createProductElement = (product) => {
   div.append(price);
   divImg.append(img);
 
-  // Agregar evento de clic al botón de carrito
   cart.addEventListener("click", () => {
       const existingProduct = carritoLleno.find(item => item.id === product.id);
       if (existingProduct) {
@@ -40,19 +39,22 @@ const createProductElement = (product) => {
   return div;
 };
 
-// Función para imprimir los productos
 export const printProductsContent = (products, categoriaSeleccionada) => {
   const divContent = document.querySelector(".content");
   divContent.innerHTML = "";
-
-  for (const product of products) {
-      if (!categoriaSeleccionada || product.categoria === categoriaSeleccionada) {
+  const filteredProducts = products.filter(product => product.categoria.includes(categoriaSeleccionada));
+    if (filteredProducts.length > 0) {
+        for (const product of filteredProducts) {
           const productElement = createProductElement(product);
           divContent.append(productElement);
-      }
-  }
+        }
+    }else{
+        for (const product of products) {
+            const productElement = createProductElement(product);
+            divContent.append(productElement);
+            }
+    }
 
-  // Ocultar el total si no hay elementos en el carrito
   if (carritoLleno.length === 0) {
       const totalSumElement = document.querySelector("#totalSum");
       totalSumElement.style.display = "none";

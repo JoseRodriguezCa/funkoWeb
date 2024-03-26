@@ -48,6 +48,7 @@
     justify-content: flex-start;
     flex-direction: column;
     gap: 100px;
+    user-select: none;
   }
   .cart > .cart-div:last-child {
     margin-bottom: 70px;
@@ -65,6 +66,7 @@
 
   #totalSum {
     margin-bottom: 30px;
+    margin-top: 20px;
     border: solid 2px red;
     padding: 10px;
   }
@@ -153,7 +155,6 @@
   width: 160px;
   text-align: center;
   gap: 20px;
-
 }
   
   .carrito:hover {
@@ -189,10 +190,6 @@
     .cart-div {
       width: 70%;
       height: 30%;
-  }
-
-  .div-span{
-    margin-right: 35px;
   }
     
   }
