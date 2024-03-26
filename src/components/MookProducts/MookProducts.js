@@ -83,7 +83,7 @@ export const PRODUCTS = [
       id: 11,
       nombre: "Funko Pop Pikachu",
       precio: 16.99,
-      categoria: ["Pokémon","Todas las animaciones"],
+      categoria: ["Pokemon","Todas las animaciones"],
       img: "https://res.cloudinary.com/dtgsaqjwa/image/upload/v1711214637/proyectoPortfolio/ProyectoFunko/funko-pop-pokemon-pikachu-10pulgadas-31542_bc5pf4.webp",
       cantidad: 1
   },

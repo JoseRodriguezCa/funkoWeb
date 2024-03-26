@@ -32,12 +32,7 @@ export const handleSearch = () => {
             })
             console.log(filteredProduct)
             printProductsContent(filteredProduct)
+            input.blur();
         }
     })
-    // input.addEventListener("keyup", (e) => {
-    //     if(e.key === 'Enter'){
-    //     e.preventDefault()
-    //     console.log(input.value)
-    //     }
-    // })
 }
