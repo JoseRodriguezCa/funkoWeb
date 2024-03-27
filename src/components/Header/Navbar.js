@@ -36,7 +36,7 @@ export const navbar = () => {
             btn.addEventListener('click' , () => {
                 const body$$ = document.body
                 body$$.classList.toggle("openned");
-                m.classList.add('active')
+                m.classList.toggle('active')
             })
         }
         if (boton.nombre == 'Buscar') {
