@@ -222,7 +222,6 @@ export const enlaces = [
             const body$$ = document.body
             body$$.classList.toggle("openned");
             containerMenu.classList.toggle("active");
-            
             if(recogedor !== "Home"){
                 PRODUCTS.forEach(element => {
                     e.preventDefault()
