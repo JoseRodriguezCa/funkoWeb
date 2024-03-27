@@ -1,4 +1,3 @@
-import { handleSubMenu } from "../enlacesHeader/EnlacesHeader"
 import "./Header.css"
 import { logo } from "./Logo"
 import { navbar } from "./Navbar"

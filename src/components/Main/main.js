@@ -1,8 +1,11 @@
-import { actualizarCarrito, carritoLleno } from '../Carrito/Carrito';
-import { actualizarSpanCarrito } from '../Header/NavBoton';
-import './main.css'
+import {
+  actualizarCarrito,
+  actualizarSpanCarrito,
+  carritoLleno,
+} from "../Carrito/Carrito";
+import "./main.css";
 
-// Función para crear un elemento de producto
+
 const createProductElement = (product) => {
   const div = document.createElement("div");
   const name = document.createElement("h3");
@@ -10,9 +13,9 @@ const createProductElement = (product) => {
   const divImg = document.createElement("div");
   const img = document.createElement("img");
   const cart = document.createElement("img");
-  const p = document.createElement('span');
+  const p = document.createElement("span");
   name.textContent = product.nombre;
-  price.textContent = product.precio + '€' ;
+  price.textContent = product.precio + "€";
   img.src = product.img;
   divImg.classList.add("div-img");
   div.classList.add("product");
@@ -25,15 +28,15 @@ const createProductElement = (product) => {
   divImg.append(img);
 
   cart.addEventListener("click", () => {
-      const existingProduct = carritoLleno.find(item => item.id === product.id);
-      if (existingProduct) {
-          existingProduct.cantidad += 1;
-      } else {
-          carritoLleno.push(product);
-      }
-      localStorage.setItem("productsCart", JSON.stringify(carritoLleno));
-      actualizarCarrito(carritoLleno);
-      actualizarSpanCarrito(carritoLleno)
+    const existingProduct = carritoLleno.find((item) => item.id === product.id);
+    if (existingProduct) {
+      existingProduct.cantidad += 1;
+    } else {
+      carritoLleno.push(product);
+    }
+    localStorage.setItem("productsCart", JSON.stringify(carritoLleno));
+    actualizarCarrito(carritoLleno);
+    actualizarSpanCarrito(carritoLleno);
   });
 
   return div;
@@ -42,21 +45,23 @@ const createProductElement = (product) => {
 export const printProductsContent = (products, categoriaSeleccionada) => {
   const divContent = document.querySelector(".content");
   divContent.innerHTML = "";
-  const filteredProducts = products.filter(product => product.categoria.includes(categoriaSeleccionada));
-    if (filteredProducts.length > 0) {
-        for (const product of filteredProducts) {
-          const productElement = createProductElement(product);
-          divContent.append(productElement);
-        }
-    }else{
-        for (const product of products) {
-            const productElement = createProductElement(product);
-            divContent.append(productElement);
-            }
+  const filteredProducts = products.filter((product) =>
+    product.categoria.includes(categoriaSeleccionada)
+  );
+  if (filteredProducts.length > 0) {
+    for (const product of filteredProducts) {
+      const productElement = createProductElement(product);
+      divContent.append(productElement);
     }
+  } else {
+    for (const product of products) {
+      const productElement = createProductElement(product);
+      divContent.append(productElement);
+    }
+  }
 
   if (carritoLleno.length === 0) {
-      const totalSumElement = document.querySelector("#totalSum");
-      totalSumElement.style.display = "none";
+    const totalSumElement = document.querySelector("#totalSum");
+    totalSumElement.style.display = "none";
   }
 };

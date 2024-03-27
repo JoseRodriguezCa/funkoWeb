@@ -2,7 +2,8 @@ import { handleSearch } from './src/components/Buscador/Buscador'
 import { header } from './src/components/Header/Header'
 import { printProductsContent } from './src/components/Main/main'
 import { PRODUCTS } from './src/components/MookProducts/MookProducts'
-import { handleSubMenu } from './src/components/enlacesHeader/EnlacesHeader'
+import { handleSubMenu } from './src/components/SubMenu/SubMenu'
+
 import './style.css'
 
 const body = document.querySelector('body')
