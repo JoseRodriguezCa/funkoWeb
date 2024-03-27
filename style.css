@@ -42,6 +42,7 @@
 
   body.openned {
     overflow-y: hidden;
+    user-select: none;
   }
   
   
