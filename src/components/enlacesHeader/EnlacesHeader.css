@@ -9,8 +9,8 @@
     border-top: 2px solid black;
     font-size: 20px;
     font-weight: 700;
-    position: absolute;
-    top: 0;
+    position: fixed;
+    bottom: 0;
     left: -100%;
     transition: left 0.3s ease;
     overflow-x: hidden;

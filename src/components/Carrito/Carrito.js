@@ -126,14 +126,14 @@ const guardarCarrito = () => {
 };
 
 export const actualizarSpanCarrito = (carritoLleno) => {
-    const contadorSpan = document.querySelector('.contador');
-    if (contadorSpan) {
-        if(carritoLleno.length == 0 ){
-            contadorSpan.textContent = '0';
-        }else {
-            contadorSpan.textContent = carritoLleno.length;
-        }
+  const contadorSpan = document.querySelector(".contador");
+  if (contadorSpan) {
+    if (carritoLleno.length == 0) {
+      contadorSpan.textContent = "0";
+    } else {
+      contadorSpan.textContent = carritoLleno.length;
     }
+  }
 };
 
 actualizarCarrito(carritoLleno);

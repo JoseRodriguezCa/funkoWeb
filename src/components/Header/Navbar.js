@@ -32,8 +32,6 @@ export const navbar = () => {
     const btn = navButton(boton.nombre, boton.icono);
     if (boton.nombre == "Menu") {
       btn.addEventListener("click", () => {
-        const body$$ = document.body;
-        body$$.classList.toggle("openned");
         m.classList.toggle("active");
       });
     }

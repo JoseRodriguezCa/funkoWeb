@@ -203,8 +203,6 @@ export const Menu = () => {
   });
   pMenu.addEventListener("click", () => {
     divContainer.classList.remove("active");
-    const body$$ = document.body;
-    body$$.classList.toggle("openned");
   });
   return divContainer;
 };
