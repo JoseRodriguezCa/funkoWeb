@@ -15,9 +15,7 @@ export const navButton = (nombre, icono) => {
     actualizarSpanCarrito(carritoLleno);
     li.addEventListener("click", () => {
       const cartDiv = document.querySelector(".cart");
-      const body$$ = document.body;
       cartDiv.classList.toggle("openned");
-      body$$.classList.toggle("openned");
     });
     li.append(span);
   }

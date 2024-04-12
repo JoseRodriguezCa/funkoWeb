@@ -23,8 +23,6 @@ export const handleSubMenu = () => {
     element.addEventListener("click", (e) => {
       const recogedor = element.innerHTML;
       const containerMenu = document.querySelector(".containerMenu");
-      const body$$ = document.body;
-      body$$.classList.toggle("openned");
       containerMenu.classList.toggle("active");
       if (recogedor !== "Home") {
         PRODUCTS.forEach((element) => {

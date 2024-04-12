@@ -51,7 +51,6 @@ export const actualizarCarrito = (products) => {
     const cartDiv = document.querySelector(".cart");
     const body$$ = document.body;
     cartDiv.classList.toggle("openned");
-    body$$.classList.toggle("openned");
   });
   totalSum.id = "totalSum";
   totalSum.textContent = "Total: " + totalSumValue.toFixed(2) + "€";
